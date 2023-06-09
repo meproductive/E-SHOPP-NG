@@ -48,7 +48,7 @@
           </div>
           <div class="icon-menu">
               <ul class="d-flex">
-                  <li><a href="login.html"><i class="fa-regular fa-user"></i></a></li>
+                  <li><a href="login.html">My Account<i class="arrow down"></i></a></li>
                   <li class="dropdown"><i class="fa-solid fa-magnifying-glass dp-btn"></i>
                     <div class="search-dp-content">
                       <input class="search-input" type="text" placeholder="New collection men fashion or etc.">
@@ -85,74 +85,69 @@
       </nav>
     </header>
     <section>
-      <div class="wrapper">
-        <div class="out-wrap">
-          <div class="product-title-container">
-            <h4 class="product-title">New Season!!! On Sale!!!</h4>
-          </div>
-          <div class="in-wrap d-flex">
-            <div class="img-content">        
-              <img id="expandedImg" class="img-size" src="t-shirtb.jpg" style="width:100%">
-              <div id="imgtext"></div>
-            </div>  
-            <div class="img-info">
-              <h2 class="playfair padding">New Season T-shirt</h2>
-              <h4 class="playfair padding">149.99 TL</h4>
-              <h4 id="font-size" class="playfair">Color</h4>
-              <div class="rating padding">
-                <div class="row">
-                  <div class="column">
-                    <img src="t-shirtb.jpg" alt="#" style="width:100%" onclick="myFunction(this);">
+        <div class="wrapper">
+            <div class="panel-content d-flex">
+                <div class="panel-container">
+                  <div id="Informations" class="paneltab">
+                    
                   </div>
-                  <div class="column">
-                    <img src="t-shirtm.jpg" alt="#" style="width:100%" onclick="myFunction(this);">
+                  <div id="Orderings" class="paneltab">
+                    <p>
+                      Some information about the product
+                    </p>
                   </div>
-                  <div class="column">
-                    <img src="t-shirts.jpg" alt="#" style="width:100%" onclick="myFunction(this);">
+                  <div id="AddProduct" class="paneltab">
+                    <div class="">
+                      <div class="form-box register">
+                          <h2>Add Product</h2>
+                          <form action="#">
+                              <div class="input-box">
+                                  <label>Product Name</label>
+                                  <input type="text" required placeholder="Write your Name here">                    
+                              </div>
+                              <div class="input-box">
+                                  <label>Description</label>
+                                  <input type="text" required placeholder="Write your Surname here">                    
+                              </div>
+                              <div class="input-box">
+                                  <label>Stock</label>
+                                  <input type="email" required placeholder="Write your e-mail here">                    
+                              </div>
+                              <div class="input-box">
+                                  <label>Password</label>
+                                  <input type="password" required placeholder="Write your password here">                      
+                              </div>
+                              <div class="remember-forgot">
+                                  <span class="d-flex"><input type="checkbox"><label class="playfair">I agree to the terms and conditions</label></span>
+                              </div>
+                              <button type="submit" class="btn">Register</button>
+                              <div class="login-register">
+                                  <p>Already have an account?<a href="login.html" class="login-link">Login</a></p>
+                              </div>
+                           </form>
+                      </div>
+                  </div>
+                  </div>
+                  <div id="Favourites" class="paneltab">
+                    <p>
+                      Some information about the product
+                    </p>
+                  </div>
+                  <div id="Comments" class="paneltab">
+                    <p>
+                      Some information about the product
+                    </p>
                   </div>
                 </div>
-                <a href="#" id="a-item-selector">Comments(5)</a><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <div class="custom-select">
-                <select id="size">
-                  <option value="C">Choose Your Size</option>
-                  <option value="S">S</option>
-                  <option value="M">M</option>
-                  <option value="L">L</option>
-                  <option value="XL">XL</option>
-                  <option value="XXL">XXL</option>
-                </select>
-              </div>
-              <p><button>Add to Cart</button></p>             
+                <ul class="panellist">
+                  <li><button id="active-button" class="panel-link" onclick="Tab('Informations', this)">Bilgilerim</button><i></i></li>
+                  <li><button class="panel-link" onclick="Tab('Orderings',this)">Siparişlerim</button><i></i></li>
+                  <li><button class="panel-link" onclick="Tab('AddProduct',this)">Ürün Ekleme</button><i></i></li>
+                  <li><button class="panel-link" onclick="Tab('Favourites',this)">Favorilerim</button><i></i></li>
+                  <li><button class="panel-link" onclick="Tab('Comments',this)">Değerlendirmelerim</button><i></i></li>
+                </ul>
             </div>
-          </div>
-          <div class="info-wrapper">
-            <hr>
-            <div class="info-content">
-              <ul class="d-flex">
-                <li class="tabli"><button class="tablink" onclick="openPage('ProductDetail',this)" id="defaultOpen">Product Details</button></li>
-                <li class="tabli"><button class="tablink" onclick="openPage('Comments',this)">Comments</button></li>
-                <li class="tabli"><button class="tablink" onclick="openPage('Description',this)">Description</button></li>
-              </ul>
-              <div id="ProductDetail" class="tabcontent">
-                <p>
-                  Some information about the product
-                </p>
-              </div>
-              <div id="Comments" class="tabcontent">
-                <p>
-                  Some information about the product
-                </p>
-              </div>
-              <div id="Description" class="tabcontent">
-                <p>
-                  Some information about the product
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>       
-      </div>
+        </div>
     </section>
     <footer class="footer-container">
         <div class="outer-container">
