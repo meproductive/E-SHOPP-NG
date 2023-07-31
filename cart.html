@@ -30,7 +30,7 @@
                       <span class="resp-x-icon"><i class="fa-solid fa-xmark"></i></span>
                     </div>                      
                   </div>
-                  <li><a class="playfair active-bottom" href="index.html">HOME</i></a></li>
+                  <li><a class="playfair active-bottom" href="#">HOME</i></a></li>
                   <li><a class="playfair" href="#">SHOP<i class="arrow down"></i></a></li>
                   <li><a class="playfair" href="#">BLOG</a></li>
                   <li class="dropdown"><a class="playfair" href="#" onclick="imaFunction()" class="drop-btn">CATEGORİES<i class="arrow down"></i></a>
@@ -55,7 +55,7 @@
                       <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                   </li>
-                  <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                  <li><a href="register.html"><i class="fa-regular fa-heart"></i></a></li>
                   <li class="dropdown"><a href="#"><i class="fa-solid fa-bag-shopping bag-dp-btn"></i></a>
                     <div class="cart-content">
                       <ul>
@@ -84,75 +84,33 @@
           </div>
       </nav>
     </header>
-    <section>
-      <div class="wrapper">
-        <div class="out-wrap">
-          <div class="product-title-container">
-            <h4 class="product-title">New Season!!! On Sale!!!</h4>
-          </div>
-          <div class="in-wrap d-flex">
-            <div class="img-content">        
-              <img id="expandedImg" class="img-size" src="t-shirtb.jpg" style="width:100%">
-              <div id="imgtext"></div>
-            </div>  
-            <div class="img-info">
-              <h2 class="playfair padding">New Season T-shirt</h2>
-              <h4 class="playfair padding">149.99 TL</h4>
-              <h4 id="font-size" class="playfair">Color</h4>
-              <div class="rating padding">
-                <div class="row">
-                  <div class="column">
-                    <img src="t-shirtb.jpg" alt="#" style="width:100%" onclick="myFunction(this);">
-                  </div>
-                  <div class="column">
-                    <img src="t-shirtm.jpg" alt="#" style="width:100%" onclick="myFunction(this);">
-                  </div>
-                  <div class="column">
-                    <img src="t-shirts.jpg" alt="#" style="width:100%" onclick="myFunction(this);">
-                  </div>
+    <h4 class="playfair wrapper cart-title">Cart</h4>
+    <section class="wrapper d-flex">
+        <div class="cart-wrap">        
+            <ul class="cart-items d-flex" >
+              <li class="items-content d-flex">             
+              <img src="t-shirtb.jpg" alt="#" width="100"/>
+                <div class="d-flex">
+                    <h3 class="playfair"><a href="#">cart item</a></h3>
+                    <p class="playfair"><a href="#">Some Informations</a></p>
                 </div>
-                <a href="#" id="a-item-selector">Comments(5)</a><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <div class="custom-select">
-                <select id="size">
-                  <option value="C">Choose Your Size</option>
-                  <option value="S">S</option>
-                  <option value="M">M</option>
-                  <option value="L">L</option>
-                  <option value="XL">XL</option>
-                  <option value="XXL">XXL</option>
-                </select>
-              </div>
-              <p><button>Add to Cart</button></p>             
+                <span class="quantity"><i class="fa-solid fa-minus cart-btn-left"></i><span class="quantity-count">5</span><i class="fa-solid fa-plus cart-btn-right"></i></span>               
+                <span class="cart-price playfair">149.99</span>
+                <i class="fa-solid fa-xmark cart-x-icon"></i>                                  
+              </li>                 
+            </ul>
+        </div>
+        <div class="sum-wrap">
+          <div class="summary">
+            <h4 class="playfair">SUMMARY</h4>
+            <span class="line"><hr/></span>          
+            <div class="summary-content d-flex">
+              <p class="playfair">Total</p>
+              <span class="playfair">149.99</span>
             </div>
-          </div>
-          <div class="info-wrapper">
-            <hr>
-            <div class="info-content">
-              <ul class="d-flex">
-                <li class="tabli"><button class="tablink" onclick="openPage('ProductDetail',this, 'white')" >Product Details</button></li>
-                <li class="tabli"><button class="tablink" onclick="openPage('Comments',this)" id="defaultOpen">Comments</button></li>
-                <li class="tabli"><button class="tablink" onclick="openPage('Description',this)">Description</button></li>
-              </ul>
-              <div id="ProductDetail" class="tabcontent">
-                <p>
-                  Some information about the product
-                </p>
-              </div>
-              <div id="Comments" class="tabcontent">
-                <p>
-                  Some information about the product
-                </p>
-              </div>
-              <div id="Description" class="tabcontent">
-                <p>
-                  Some information about the product
-                </p>
-              </div>
-            </div>
-          </div>
+         </div>
+        <a href="#" id="buy-btn" class="playfair">Buy Now</a>
         </div>       
-      </div>
     </section>
     <footer class="footer-container">
         <div class="outer-container">
@@ -208,5 +166,5 @@
         </div>
       </footer>
       <script src="script.js"></script>
-</body>
-</html>
+  </body>
+  </html>

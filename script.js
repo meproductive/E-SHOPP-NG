@@ -41,7 +41,6 @@ dpbtn.addEventListener("click", function() {
   });
 });
 
-
 var x, i, j, l, ll, selElmnt, a, b, c;
 x = document.getElementsByClassName("custom-select");
 l = x.length;
@@ -155,14 +154,32 @@ windows.onclick = function(event) {
   }
 }
 
+
+function imFunction() {
+  document.getElementById("imDropdown").classList.toggle("show");
+}
+
+windows.onclick = function(event) {
+  if (!event.target.matches('.drop-txt')) {
+    var drpdwns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < drpdwns.length; i++) {
+      var openDpn = drpdwns[i];
+      if (openDpn.classList.contains('show')) {
+        openDpn.classList.remove('show');
+      }
+    }
+  }
+}
+
 function myFunction(imgs) {
   var expandImg = document.getElementById("expandedImg");
   expandImg.src = imgs.src;
   expandImg.parentElement.style.display = "block";
 }
 
-function openPage(pageName, elmnt, color) {
 
+function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -175,28 +192,30 @@ function openPage(pageName, elmnt, color) {
   }
 
   document.getElementById(pageName).style.display = "block";
-
   elmnt.style.backgroundColor = color;
 }
 
 document.getElementById("defaultOpen").click();
 
 
-function Tab(page, elmnt, color) {
+function Tab(pageName,elmnt,color) {
+  // Hide all elements with class="tabcontent" by default */
   var i, paneltab, panellink;
   paneltab = document.getElementsByClassName("paneltab");
   for (i = 0; i < paneltab.length; i++) {
     paneltab[i].style.display = "none";
   }
 
+  // Remove the background color of all tablinks/buttons
   panellink = document.getElementsByClassName("panel-link");
   for (i = 0; i < panellink.length; i++) {
     panellink[i].style.backgroundColor = "";
   }
 
-  document.getElementById(page).style.display = "block";
-
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
 }
 
-document.getElementsById("active-button").click();
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("default").click();

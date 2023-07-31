@@ -48,7 +48,16 @@
           </div>
           <div class="icon-menu">
               <ul class="d-flex">
-                  <li><a href="login.html"><i class="fa-regular fa-user"></i></a></li>
+                <li class="dropdown"><a class="playfair" href="#" onclick="imFunction()" class="drop-txt">My Account</a>
+                  <div class="dropdown-content" id="imDropdown">
+                    <ul>
+                      <li id="dp-li-item"><a href="#">Admin Panel</a></li>
+                      <li id="dp-li-item"><a href="#">Teen</a></li>
+                      <li id="dp-li-item"><a href="#">Kid</a></li>
+                      <li id="dp-li-item"><a href="#">Accessory</a></li>
+                    </ul>
+                  </div>
+                  </li>
                   <li class="dropdown"><i class="fa-solid fa-magnifying-glass dp-btn"></i>
                     <div class="search-dp-content">
                       <input class="search-input" type="text" placeholder="New collection men fashion or etc.">
@@ -85,57 +94,104 @@
       </nav>
     </header>
     <section>
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <img src="carouselfourth.png" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img src="carouselsecond.png" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img src="carouselthird.png" style="width:100%">
-      </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="wrapper">
+        <div class="panel-content d-flex">
+            <div class="panel-container">
+              <div id="Informations" class="paneltab">
+                <p>
+                  Some information about the product
+                </p>
+              </div>
+              <div id="Orderings" class="paneltab">
+                <div class="box-model">
+                  <div class="register-model">
+                      <h2>Add Product</h2>
+                      <form action="#">
+                          <div class="input-box">
+                            <label>Category Name</label>
+                            <input type="text" required placeholder="Write cagetory name here">                    
+                          </div>
+                          <div class="input-box">
+                            <label>Description</label>
+                            <textarea rows="5" cols="" required placeholder="Write description here"></textarea>                    
+                          </div>
+                            <div class="remember-forgot">
+                            <span class="d-flex"><input type="checkbox"></span>
+                          </div>
+                          <button type="submit" class="btn">Apply</button>
+                       </form>
+                  </div>
+              </div>
+              </div>
+              <div id="AddProduct" class="paneltab">
+                <div class="box-model">
+                  <div class="register-model">
+                      <h2>Add Product</h2>
+                      <form action="#">
+                          <div class="input-box">
+                            <label>Product Name</label>
+                            <input type="text" required placeholder="Write product name here">                    
+                          </div>
+                         
+                          <div class="input-box">
+                            <label>Price</label>
+                            <input type="text" required placeholder="Write price here">                      
+                          </div>
+                          <div class="input-box">
+                            <label>Color</label>
+                            <input type="text" required placeholder="Write color here">                      
+                          </div>
+                          <div class="input-box">
+                            <label>Brand</label>
+                            <input type="text" required placeholder="Write brand here">                      
+                          </div>
+                          <div class="input-box">
+                            <label for="amount">Stock</label>
+                            <input name="amount" type="number" step="1" required placeholder="Write amount here">                    
+                          </div>
+                          <div class="">
+                            <select name="amount" id="size">
+                              <option value="S">S</option>
+                              <option value="M">M</option>
+                              <option value="L">L</option>
+                              <option value="XL">XL</option>
+                              <option value="XXL">XXL</option>
+                            </select>                       
+                          </div>
+                          <div class="input-box">
+                            <label>Description</label>
+                            <textarea rows="5" cols="" required placeholder="Write description here"></textarea>                    
+                          </div>
+                          <div class="input-box">
+                            <label>Image</label>
+                            <input type="file">              
+                          </div>
+                            <div class="remember-forgot">
+                            <span class="d-flex"><input type="checkbox"></span>
+                          </div>
+                          <button type="submit" class="btn">Apply</button>
+                       </form>
+                  </div>
+              </div>
+              </div>
+              <div id="Favourites" class="paneltab">
+                <p>
+                  Some information about the product
+                </p>
+              </div>
+              <div id="Comments" class="paneltab">
+                <p>
+                  Some information about the product
+                </p>
+              </div>
+            </div>
+            <ul class="panellist">
+              <li><button class="panel-link" onclick="Tab('Informations',this)" id="default">Bilgilerim</button><i></i></li>
+              <li><button class="panel-link" onclick="Tab('Orderings',this)">Add Cagetory</button><i></i></li>
+              <li><button class="panel-link" onclick="Tab('AddProduct',this)">Ürün Ekleme</button><i></i></li>
+            </ul>
+        </div>
     </div>
-    <br>
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-      <div class="card-outer-container">
-        <div class="card-inner-container d-flex">
-          <div class="card-content">
-            <a href="detail.html"><img src="t-shirtb.jpg" alt="#" style="width:100%"></a>
-            <h1><a href="#">T-Shirt</a></h1>
-            <p class="price">149.99</p>
-            <p>Some information about the product.</p>
-            <p><button>Add to Cart</button></p>
-          </div>
-          <div class="card-content">
-            <a href="detail.html"><img src="t-shirts.jpg" alt="#" style="width:100%"></a>
-            <h1><a href="#">T-Shirt</a></h1>
-            <p class="price">149.99</p>
-            <p>Some information about the product.</p>
-            <p><button>Add to Cart</button></p>
-          </div>
-          <div class="card-content">
-            <a href="detail.html"><img src="t-shirtm.jpg" alt="#" style="width:100%"></a>
-            <h1><a href="#">T-Shirt</a></h1>
-            <p class="price">149.99</p>
-            <p>Some information about the product.</p>
-            <p><button>Add to Cart</button></p>
-          </div>
-          <div class="card-content">
-            <a href="detail.html"><img src="t-shirtz.jpg" alt="#" style="width:100%"></a>
-            <h1><a href="#">T-Shirt</a></h1>
-            <p class="price">149.99</p>
-            <p>Some information about the product.</p>
-            <p><button>Add to Cart</button></p>
-          </div>
-        </div>       
-      </div>
     </section>
     <footer class="footer-container">
       <div class="outer-container">
